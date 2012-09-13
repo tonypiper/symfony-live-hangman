@@ -23,14 +23,14 @@ class PlayerController extends Controller
         $form = $this->createForm(new PlayerType());
 
         if ($request->isMethod('POST')) {
-            $form->bindRequest($request);
+            $form->bind($request);
             if ($form->isValid()) {
                 $player = $form->getData();
 
                 // get the encoder and encode the password
                 // ...
 
-                $em = $this->getDoctrine()->getEntityManager();
+                $em = $this->getDoctrine()->getManager();
                 $em->persist($player);
                 $em->flush();
 
