@@ -4,6 +4,7 @@ namespace Sensio\Bundle\HangmanBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class PlayerType extends AbstractType
 {
